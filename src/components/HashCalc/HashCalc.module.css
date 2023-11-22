@@ -9,3 +9,15 @@
 .label {
   position: relative;
 }
+
+.hashContainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto 100px;
+  align-items: center;
+  gap: 20px;
+}
+
+.hashContainer h3 {
+  margin: 0;
+}

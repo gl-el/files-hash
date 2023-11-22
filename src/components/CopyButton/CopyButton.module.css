@@ -1,0 +1,21 @@
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  width: 100%;
+}
+
+.label {
+  box-sizing: border-box;
+  position: absolute;
+  width: 150%;
+  top: 60px;
+  left: -25%;
+  text-align: center;
+  background: #2b2b2b;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 1px solid #747bff;
+}

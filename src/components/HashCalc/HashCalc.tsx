@@ -1,7 +1,8 @@
 import { useState } from 'react';
 //import cryptoJS from 'crypto-js';
 import s from './HashCalc.module.css';
-import { InputFile } from '../UI/InputFile';
+import { InputFile } from '../InputFile/InputFile';
+import { CopyButton } from '../CopyButton/CopyButton';
 
 export function HashCalc() {
   const [hash, setHash] = useState('');
@@ -38,7 +39,16 @@ export function HashCalc() {
   return (
     <div className={s.container}>
       <InputFile onInputChange={handleFileInput} />
-      <h3>SHA1 hash: {hash}</h3>
+      <div className={s.hashContainer}>
+        {hash ? (
+          <>
+            <h3>SHA1 hash: {hash}</h3>
+            <CopyButton textToCopy={hash} />
+          </>
+        ) : (
+          <h3>SHA1 hash will be calculated here</h3>
+        )}
+      </div>
     </div>
   );
 }
