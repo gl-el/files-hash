@@ -22,9 +22,9 @@ export function InputFile({ onInputChange }: { onInputChange: (file: File) => vo
         onDrop={() => setIsDrag(false)}
       >
         <HardDriveUpload size={'60'} />
-        {!fileName && !isDrag && <h2>Click box to choose a file or place it here</h2>}
-        {isDrag && <h2>Drop file here</h2>}
-        {fileName && !isDrag && <h2>{fileName}</h2>}
+        {!fileName && !isDrag && <p>Click box to choose a file or place it here</p>}
+        {isDrag && <p>Drop file here</p>}
+        {fileName && !isDrag && <p>{fileName}</p>}
         <input type='file' onChange={handleFile} />
       </div>
     </div>

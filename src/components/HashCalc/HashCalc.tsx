@@ -39,14 +39,18 @@ export function HashCalc() {
   return (
     <div className={s.container}>
       <InputFile onInputChange={handleFileInput} />
-      <div className={s.hashContainer}>
+      <div className={`${s.hashContainer} ${hash ? s.grid : ''}`}>
         {hash ? (
           <>
-            <h3>SHA1 hash: {hash}</h3>
+            <p>
+              SHA1 hash: <span className={s.highlighted}>{hash}</span>
+            </p>
             <CopyButton textToCopy={hash} />
           </>
         ) : (
-          <h3>SHA1 hash will be calculated here</h3>
+          <p>
+            SHA1 hash will be calculated <span className={s.highlighted}>here</span>
+          </p>
         )}
       </div>
     </div>

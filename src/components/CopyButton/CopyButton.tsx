@@ -1,4 +1,4 @@
-import { ClipboardCopy } from 'lucide-react';
+import { Copy } from 'lucide-react';
 import s from './CopyButton.module.css';
 import { useState, useEffect } from 'react';
 
@@ -21,11 +21,11 @@ export function CopyButton({ textToCopy }: { textToCopy: string }) {
   return (
     <div className={s.container}>
       <button className={s.button} onClick={handleCopy}>
-        <ClipboardCopy />
+        <Copy />
       </button>
       {copyStatus !== 'idle' && (
         <span className={s.label} role='tooltip'>
-          {copyStatus === 'success' ? 'Successful copied' : 'Error occurred'}
+          {copyStatus === 'success' ? 'Successfully copied' : 'Error occurred'}
         </span>
       )}
     </div>

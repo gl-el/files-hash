@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .label {
@@ -12,12 +14,18 @@
 
 .hashContainer {
   margin-top: 50px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: auto 100px;
   align-items: center;
   gap: 20px;
 }
 
-.hashContainer h3 {
-  margin: 0;
+.highlighted {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #747bff;
 }
