@@ -5,6 +5,8 @@
 
 .button {
   width: 100%;
+  background-color: var(--color-bg-light);
+  color: var(--color-white);
 }
 
 .label {
@@ -16,8 +18,8 @@
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  background: #2b2b2b;
+  background: var(--color-bg-light);
   padding: 10px;
   border-radius: 10px;
-  outline: 1px solid #747bff;
+  outline: 1px solid var(--color-accent);
 }

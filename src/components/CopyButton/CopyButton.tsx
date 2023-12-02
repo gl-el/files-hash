@@ -2,8 +2,10 @@ import { Copy } from 'lucide-react';
 import s from './CopyButton.module.css';
 import { useState, useEffect } from 'react';
 
+type CopyStatusType = 'idle' | 'success' | 'error';
+
 export function CopyButton({ textToCopy }: { textToCopy: string }) {
-  const [copyStatus, setCopyStatus] = useState('idle');
+  const [copyStatus, setCopyStatus] = useState<CopyStatusType>('idle');
 
   const handleCopy = () => {
     navigator.clipboard

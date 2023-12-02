@@ -1,25 +1,19 @@
-.container {
-  width: 600px;
-  padding: 25px;
-  background: #2b2b2b;
-  border-radius: 30px;
+.upload {
   font-size: 24px;
   font-weight: 600;
-}
-
-.upload {
   text-align: center;
+  text-wrap: wrap;
   border-radius: 10px;
   padding: 20px;
   position: relative;
   cursor: pointer;
-  border: 2px dashed #747bff;
+  border: 2px dashed var(--color-accent);
   box-shadow: none;
   transition: box-shadow 0.5s ease-in-out;
 }
 
 .uploadActive {
-  box-shadow: 0px 0px 10px 5px #747bff;
+  box-shadow: 0px 0px 10px 5px var(--color-accent);
 }
 
 .upload input {
