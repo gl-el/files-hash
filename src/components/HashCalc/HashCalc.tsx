@@ -1,8 +1,7 @@
 import { useState } from 'react';
-//import cryptoJS from 'crypto-js';
-import s from './HashCalc.module.css';
 import { InputFile } from '../InputFile/InputFile';
 import { CopyButton } from '../CopyButton/CopyButton';
+import s from './HashCalc.module.css';
 
 export function HashCalc() {
   const [hash, setHash] = useState('');
@@ -28,11 +27,6 @@ export function HashCalc() {
       const data = reader.result;
       if (data === null) return;
       digestMessage(data).then((hash) => setHash(hash));
-      /*       const enc = new TextDecoder('utf-8');
-      if (data instanceof ArrayBuffer) {
-        const hash = cryptoJS.SHA1(cryptoJS.lib.WordArray.create(data)).toString();
-        console.log('Checksum', hash);
-      } */
     };
   };
 
