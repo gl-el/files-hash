@@ -21,26 +21,28 @@ export function InputFile({ onInputChange, fileName }: { onInputChange: (file: F
   };
 
   return (
-    <div
-      className={`${s.upload} ${isDrag ? s.uploadActive : ''}`}
-      onDragEnter={(e) => {
-        stopDragEvent(e);
-        setIsDrag(true);
-      }}
-      onDragLeave={(e) => {
-        stopDragEvent(e);
-        if (e.currentTarget.contains(e.relatedTarget as HTMLElement)) return;
-        setIsDrag(false);
-      }}
-      onDrop={() => {
-        setIsDrag(false);
-      }}
-    >
-      <HardDriveUpload size={'60'} />
-      {!fileName && !isDrag && <p>Click box to choose a file or place it here</p>}
-      {isDrag && <p>Drop file here</p>}
-      {fileName && !isDrag && <p>{fileName}</p>}
-      <input type='file' onChange={handleFile} ref={inputRef} />
+    <div className={s.container}>
+      <div
+        className={`${s.upload} ${isDrag ? s.uploadActive : ''}`}
+        onDragEnter={(e) => {
+          stopDragEvent(e);
+          setIsDrag(true);
+        }}
+        onDragLeave={(e) => {
+          stopDragEvent(e);
+          if (e.currentTarget.contains(e.relatedTarget as HTMLElement)) return;
+          setIsDrag(false);
+        }}
+        onDrop={() => {
+          setIsDrag(false);
+        }}
+      >
+        <HardDriveUpload size={'60'} />
+        {!fileName && !isDrag && <p>Click box to choose a file or place it here</p>}
+        {isDrag && <p>Drop file here</p>}
+        {fileName && !isDrag && <p>{fileName}</p>}
+        <input type='file' onChange={handleFile} ref={inputRef} />
+      </div>
     </div>
   );
 }

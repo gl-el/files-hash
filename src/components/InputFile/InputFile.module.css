@@ -1,3 +1,10 @@
+.container {
+  width: min(650px, 80%);
+  padding: 25px;
+  background: var(--color-bg-light);
+  border-radius: 30px;
+}
+
 .upload {
   font-size: 24px;
   font-weight: 600;
